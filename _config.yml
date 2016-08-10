@@ -1,5 +1,5 @@
 # Site settings
-name: Traci and Greg
+name: Jake Siddall
 # title: Your awesome title
 # email: your-email@domain.com
 # description: > # this means to ignore newlines until "baseurl:"
@@ -7,8 +7,4 @@ name: Traci and Greg
 #   line in _config.yml. It will appear in your document head meta (for
 #   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.traciandgreg.com" # the base hostname & protocol for your site
-
-# Build settings
-markdown: redcarpet
-highlighter: pygments
+url: "http://www.siddall.me" # the base hostname & protocol for your site
