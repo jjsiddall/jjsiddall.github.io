@@ -1,10 +1,13 @@
 # Site settings
-name: Jake Siddall
+name: Jake Siddall's CV
+title: Jake Siddall's CV
 # title: Your awesome title
-# email: your-email@domain.com
+email: jacobsiddall@gmail.com
 # description: > # this means to ignore newlines until "baseurl:"
 #   Write an awesome description for your new site here. You can edit this
 #   line in _config.yml. It will appear in your document head meta (for
 #   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.siddall.me" # the base hostname & protocol for your site
+baseurl: "/siddall" # the subpath of your site, e.g. /blog/
+url: "http://cv.siddall.me" # the base hostname & protocol for your site
+twitter_username: jjsiddall
+github_username:  jjsiddall
