@@ -9,47 +9,21 @@
 				<p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 				<p></p>
 				<p></p>
-				<div class="row-fluid">
-					<div class="span4">
-						<ul id="bl-work-items" style="list-style: none;">
-							<li data-panel="panel-1"><a href="#"><img src="images/project1.jpg" /></a></li>
-						</ul>
-						<p>Fantasy4Reality.com</p>
-					</div><!-- /span4 -->
-					<div class="span4">
-						<ul id="bl-work-items">
-							<li data-panel="panel-2"><a href="#"><img src="images/project2.jpg" /></a></li>
-						</ul>
-						<p>DebtPayoff.com</p>
-					</div><!-- /span4 -->
-					<div class="span4">
-						<ul id="bl-work-items">
-							<li data-panel="panel-3"><a href="#"><img src="images/project3.jpg" /></a></li>
-						</ul>
-						<p>Chess</p>
-					</div><!-- /span4 -->
-				</div><!-- /row-fluid -->
-
-				<div class="row-fluid">
-					<div class="span4">
-						<ul id="bl-work-items" style="list-style: none;">
-							<li data-panel="panel-4"><a href="#"><img src="images/project4.jpg" /></a></li>
-						</ul>
-						<p>KidFinance</p>
-					</div><!-- /span4 -->
-					<div class="span4">
-						<ul id="bl-work-items">
-							<li data-panel="panel-5"><a href="#"><img src="images/project5.jpg" /></a></li>
-						</ul>
-						<p>CardCollector</p>
-					</div><!-- /span4 -->
-					<div class="span4">
-						<ul id="bl-work-items">
-							<li data-panel="panel-6"><a href="#"><img src="images/project6.jpg" /></a></li>
-						</ul>
-						<p>Chess</p>
-					</div><!-- /span4 -->
-				</div><!-- /row-fluid -->
+				{% for project in site.projects %}
+					{% assign mod_index = forloop.index | modulo: 3 %}
+					{% if mod_index == 1 %}
+						<div class="row-fluid">
+					{% endif %}
+							<div class="span4">
+								<ul id="bl-work-items" style="list-style: none;">
+									<li data-panel="panel-{{forloop.index}}"><a href="#"><img src="images/project1.jpg" /></a></li>
+								</ul>
+								<p>{{ project.title }}</p>
+							</div><!-- /span4 -->
+					{% if mod_index == 0 or forloop.last %} 
+						</div>
+					{% endif %}
+				{% endfor %}
 
 			</div><!-- /bl-content -->
 			<span class="bl-icon bl-icon-close"></span>
