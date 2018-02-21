@@ -1,16 +1,20 @@
 <!--=========== BLOG SECTION ===========-->
 		<section>
 			<div class="bl-box">
-				<h2>My deepest thoughts</h2>
+				<h2>My thoughts</h2>
 			</div>
 			<div class="bl-content">
 				<div class="row-fluid">
 					<div class="span12">
+						<h2>Blog</h2>
+					</div><!-- /span12 -->
+				</div><!-- /row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
 						{% for post in site.posts %}
-						<h2>Latest Blog Entry</h2>
 						<article>
-							<h3>{{ post.title }}</h3>
-							<p>{{ post.excerpt }}</p>
+							<h3>{{ post.title }} <small class="blog">{{ post.date | date: "%a, %b %d, %y" }}</small></h3>
+							<p>{{ post.excerpt | remove: '<p>' | remove: '</p>'  }}</p>
 						</article>
 						{% endfor %}
 					</div><!-- /span12 -->
