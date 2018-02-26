@@ -14,7 +14,7 @@
 						{% for post in site.posts %}
 						<article>
 							<h3>{{ post.title }} <small class="blog">{{ post.date | date: "%a, %b %d, %y" }}</small></h3>
-							<p>{{ post.excerpt | remove: '<p>' | remove: '</p>'  }}</p>
+							<p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}...<a href="{{ post.url }}">read more</a></p>
 						</article>
 						{% endfor %}
 					</div><!-- /span12 -->
